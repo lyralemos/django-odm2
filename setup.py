@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 regexp = re.compile(r'.*__version__ = [\'\"](.*?)[\'\"]', re.S)
 
-base_package = 'django_odm2'
+base_package = 'django-odm2'
 base_path = os.path.dirname(__file__)
 
 init_file = os.path.join(base_path, 'src', 'django_odm2', '__init__.py')
@@ -40,18 +40,18 @@ requirements = parse_requirements('requirements.txt')
 
 if __name__ == '__main__':
     setup(
-        name='django_odm2',
+        name='django-odm2',
         description='Django-odm2 maps the ODM2 model to django ORM',
         long_description='\n\n'.join([readme, changes]),
         license='MIT license',
-        url='https://github.com/lyralemos/django_odm2',
+        url='https://github.com/lyralemos/django-odm2',
         version=version,
         author='Alexandre Marinho',
         author_email='lyralemos@gmail.com',
         maintainer='Alexandre Marinho',
         maintainer_email='lyralemos@gmail.com',
         install_requires=requirements,
-        keywords=['django_odm2'],
+        keywords=['django-odm2'],
         package_dir={'': 'src'},
         packages=find_packages('src'),
         zip_safe=False,

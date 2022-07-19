@@ -29,7 +29,7 @@ django-odm2 is available on PyPI and can be installed with `pip <https://pip.pyp
 
 .. code-block:: console
 
-    $ pip install django_odm2
+    $ pip install django-odm2
 
 After installing django-odm2 add it to your INSTALLED_APPS list:
 
@@ -46,4 +46,4 @@ Then run migrate command to create the database tables:
 
     $ python manage.py migrate
 
-The `API Reference <http://django_odm2.readthedocs.io>`_ provides API-level documentation.
+The `API Reference <http://django-odm2.readthedocs.io>`_ provides API-level documentation.

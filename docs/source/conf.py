@@ -9,8 +9,8 @@
 import os
 import re
 import sys
-import django
 
+import django
 from sphinx.ext import apidoc
 
 root = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))

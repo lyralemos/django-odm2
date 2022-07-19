@@ -24,9 +24,9 @@ The simplest way to install django-odm2 is using Pip.
 
 .. code-block:: console
 
-    $ pip install django_odm2
+    $ pip install django-odm2
 
-This will install ``django_odm2`` and all of its dependencies.
+This will install ``django-odm2`` and all of its dependencies.
 
 
 .. _api-reference-label:
@@ -34,7 +34,7 @@ This will install ``django_odm2`` and all of its dependencies.
 API Reference
 =============
 
-The `API Reference <http://django_odm2.readthedocs.io>`_ provides API-level documentation.
+The `API Reference <http://django-odm2.readthedocs.io>`_ provides API-level documentation.
 
 
 .. include:: ../../../CHANGELOG.rst
@@ -45,7 +45,7 @@ The `API Reference <http://django_odm2.readthedocs.io>`_ provides API-level docu
 Report Bugs
 ===========
 
-Report bugs at the `issue tracker <https://github.com/lyralemos/django_odm2/issues>`_.
+Report bugs at the `issue tracker <https://github.com/lyralemos/django-odm2/issues>`_.
 
 Please include:
 

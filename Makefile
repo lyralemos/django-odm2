@@ -19,7 +19,7 @@ help:
 .PHONY: venv
 venv:
 	@rm -Rf venv
-	@python3 -m venv venv --prompt django_odm2
+	@python3 -m venv venv --prompt django-odm2
 	@/bin/bash -c "source venv/bin/activate && pip install pip --upgrade && pip install -r requirements.dev.txt && pip install -e ."
 	@echo "Enter virtual environment using:\n\n\t$ source venv/bin/activate\n"
 
@@ -90,7 +90,7 @@ check-static-analysis: check-lint check-types
 # help: docs                           - generate project documentation
 .PHONY: docs
 docs:
-	@cd docs; rm -rf source/api/django_odm2*.rst source/api/modules.rst build/*
+	@cd docs; rm -rf source/api/django-odm2*.rst source/api/modules.rst build/*
 	@cd docs; make html
 
 
@@ -115,7 +115,7 @@ dist:
 # help: dist-upload                    - upload a wheel distribution package
 .PHONY: dist-upload
 dist-upload:
-	@twine upload dist/django_odm2-*-py3-none-any.whl
+	@twine upload dist/django-odm2-*-py3-none-any.whl
 
 
 # Keep these lines at the end of the file to retain nice help
