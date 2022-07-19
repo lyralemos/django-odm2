@@ -550,7 +550,7 @@ class Migration(migrations.Migration):
                         db_column='datasetid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='django_django_odm2.dataset',
+                        to='django_odm2.dataset',
                     ),
                 ),
             ],
