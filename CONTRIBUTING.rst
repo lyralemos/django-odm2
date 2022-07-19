@@ -65,26 +65,6 @@ is as follows.
   * Make a fix or enhancement (e.g. modify a class, method, function, module,
     etc).
 
-  * Update an existing unit test or create a new unit test module to verify
-    the change works as expected.
-
-  * Run the test suite.
-
-    .. code-block:: console
-
-        (django-odm2) $ make test
-
-    See the :ref:`testing-label` section for more information on testing.
-
-  * Check code coverage of the area of code being modified.
-
-    .. code-block:: console
-
-        (django-odm2) $ make coverage
-
-    Review the output produced in ``docs/source/_static/coverage/coverage.html``.
-    Add additional test steps, where practical, to improve coverage.
-
   * The change should be style compliant. Perform style check.
 
     .. code-block:: console
