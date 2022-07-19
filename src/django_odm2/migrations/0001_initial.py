@@ -550,7 +550,7 @@ class Migration(migrations.Migration):
                         db_column='datasetid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.dataset',
+                        to='django_django_odm2.dataset',
                     ),
                 ),
             ],
@@ -960,7 +960,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='feature_actions',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
             ],
@@ -1260,8 +1260,8 @@ class Migration(migrations.Migration):
                     'citations',
                     models.ManyToManyField(
                         related_name='cited_authors',
-                        through='odm2.AuthorList',
-                        to='odm2.citation',
+                        through='django_odm2.AuthorList',
+                        to='django_odm2.citation',
                     ),
                 ),
             ],
@@ -1708,8 +1708,8 @@ class Migration(migrations.Migration):
                     'actions',
                     models.ManyToManyField(
                         related_name='sampling_features',
-                        through='odm2.FeatureAction',
-                        to='odm2.action',
+                        through='django_odm2.FeatureAction',
+                        to='django_odm2.action',
                     ),
                 ),
             ],
@@ -1826,7 +1826,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2269,7 +2269,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2429,7 +2429,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                         related_name='calibration',
                         serialize=False,
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -2463,7 +2463,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('x_location', models.FloatField(db_column='xlocation')),
@@ -2474,7 +2474,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='qualitycodecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.qualitycode',
+                        to='django_odm2.qualitycode',
                     ),
                 ),
             ],
@@ -2493,7 +2493,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                         related_name='maintenance',
                         serialize=False,
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -2531,7 +2531,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -2546,7 +2546,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
                 (
@@ -2554,7 +2554,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='censorcodecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.censorcode',
+                        to='django_odm2.censorcode',
                     ),
                 ),
                 (
@@ -2562,7 +2562,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='qualitycodecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.qualitycode',
+                        to='django_odm2.qualitycode',
                     ),
                 ),
             ],
@@ -2580,7 +2580,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -2603,7 +2603,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2621,7 +2621,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('x_location', models.FloatField(db_column='xlocation')),
@@ -2643,7 +2643,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2661,7 +2661,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('y_location', models.FloatField(db_column='ylocation')),
@@ -2686,7 +2686,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2704,7 +2704,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
                 (
@@ -2718,7 +2718,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='specimenmediumcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.medium',
+                        to='django_odm2.medium',
                     ),
                 ),
                 (
@@ -2726,7 +2726,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='specimentypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.specimentype',
+                        to='django_odm2.specimentype',
                     ),
                 ),
             ],
@@ -2744,7 +2744,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.featureaction',
+                        to='django_odm2.featureaction',
                     ),
                 ),
                 (
@@ -2774,7 +2774,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('x_location', models.FloatField(db_column='xlocation')),
@@ -2789,7 +2789,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2807,7 +2807,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('x_location', models.FloatField(db_column='xlocation')),
@@ -2824,7 +2824,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2842,7 +2842,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -2860,7 +2860,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2878,7 +2878,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 ('z_location', models.FloatField(db_column='zlocation')),
@@ -2897,7 +2897,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
             ],
@@ -2933,7 +2933,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -2941,7 +2941,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='variableid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.variable',
+                        to='django_odm2.variable',
                     ),
                 ),
             ],
@@ -2969,7 +2969,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
                 (
@@ -2977,7 +2977,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='variableid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.variable',
+                        to='django_odm2.variable',
                     ),
                 ),
             ],
@@ -2990,8 +2990,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='variables',
-                through='odm2.VariableExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.VariableExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -2999,8 +2999,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='variables',
-                through='odm2.VariableExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.VariableExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -3011,7 +3011,7 @@ class Migration(migrations.Migration):
                 db_column='speciationcv',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.speciation',
+                to='django_odm2.speciation',
             ),
         ),
         migrations.AddField(
@@ -3020,7 +3020,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='variablenamecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.variablename',
+                to='django_odm2.variablename',
             ),
         ),
         migrations.AddField(
@@ -3029,7 +3029,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='variabletypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.variabletype',
+                to='django_odm2.variabletype',
             ),
         ),
         migrations.CreateModel(
@@ -3062,7 +3062,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='unitstypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.unitstype',
+                        to='django_odm2.unitstype',
                     ),
                 ),
             ],
@@ -3085,7 +3085,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3094,7 +3094,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.transectresultvalue',
+                        to='django_odm2.transectresultvalue',
                     ),
                 ),
             ],
@@ -3107,8 +3107,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_transect_values',
-                through='odm2.TransectResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.TransectResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3117,7 +3117,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -3126,7 +3126,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -3138,7 +3138,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3147,7 +3147,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='transectdistanceunitsid',
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3159,7 +3159,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3171,7 +3171,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -3188,7 +3188,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3197,7 +3197,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.trajectoryresultvalue',
+                        to='django_odm2.trajectoryresultvalue',
                     ),
                 ),
             ],
@@ -3210,8 +3210,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_Trajectory_values',
-                through='odm2.TrajectoryResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.TrajectoryResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3220,7 +3220,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -3229,7 +3229,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -3241,7 +3241,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3250,7 +3250,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='trajectorydistanceunitsid',
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3262,7 +3262,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3274,7 +3274,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3286,7 +3286,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -3303,7 +3303,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3312,7 +3312,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.timeseriesresultvalue',
+                        to='django_odm2.timeseriesresultvalue',
                     ),
                 ),
             ],
@@ -3325,8 +3325,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_time_series_values',
-                through='odm2.TimeSeriesResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.TimeSeriesResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3335,7 +3335,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -3344,7 +3344,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -3356,7 +3356,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -3388,7 +3388,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -3396,7 +3396,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='taxonomicclassifierid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.taxonomicclassifier',
+                        to='django_odm2.taxonomicclassifier',
                     ),
                 ),
             ],
@@ -3409,8 +3409,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='taxonomic_classifier',
-                through='odm2.TaxonomicClassifierExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.TaxonomicClassifierExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -3421,7 +3421,7 @@ class Migration(migrations.Migration):
                 db_column='parenttaxonomicclassifierid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.taxonomicclassifier',
+                to='django_odm2.taxonomicclassifier',
             ),
         ),
         migrations.AddField(
@@ -3430,7 +3430,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='taxonomicclassifiertypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.taxonomicclassifiertype',
+                to='django_odm2.taxonomicclassifiertype',
             ),
         ),
         migrations.CreateModel(
@@ -3447,7 +3447,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3456,7 +3456,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.spectraresultvalue',
+                        to='django_odm2.spectraresultvalue',
                     ),
                 ),
             ],
@@ -3469,8 +3469,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_spectra_values',
-                through='odm2.SpectraResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.SpectraResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3479,7 +3479,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -3488,7 +3488,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -3500,7 +3500,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3509,7 +3509,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='wavelengthunitsid',
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -3541,7 +3541,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -3549,7 +3549,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='spatialreferenceid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.spatialreference',
+                        to='django_odm2.spatialreference',
                     ),
                 ),
             ],
@@ -3562,8 +3562,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='spatial_references',
-                through='odm2.SpatialReferenceExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.SpatialReferenceExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.CreateModel(
@@ -3599,7 +3599,7 @@ class Migration(migrations.Migration):
                         db_column='offset1unitid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -3610,7 +3610,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -3621,7 +3621,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -3629,7 +3629,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='spatialoffsettypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.spatialoffsettype',
+                        to='django_odm2.spatialoffsettype',
                     ),
                 ),
             ],
@@ -3692,7 +3692,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='simulations',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -3703,7 +3703,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='simulations',
-                        to='odm2.dataset',
+                        to='django_odm2.dataset',
                     ),
                 ),
                 (
@@ -3712,7 +3712,7 @@ class Migration(migrations.Migration):
                         db_column='modelid',
                         on_delete=deletion.CASCADE,
                         related_name='simulations',
-                        to='odm2.model',
+                        to='django_odm2.model',
                     ),
                 ),
                 (
@@ -3721,7 +3721,7 @@ class Migration(migrations.Migration):
                         db_column='timestepunitsid',
                         on_delete=deletion.CASCADE,
                         related_name='simulations',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
             ],
@@ -3743,7 +3743,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3752,7 +3752,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.sectionresultvalue',
+                        to='django_odm2.sectionresultvalue',
                     ),
                 ),
             ],
@@ -3765,8 +3765,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_section_values',
-                through='odm2.SectionResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.SectionResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3775,7 +3775,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -3784,7 +3784,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -3796,7 +3796,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3808,7 +3808,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -3820,7 +3820,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -3852,7 +3852,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -3860,7 +3860,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='samplingfeatureid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
             ],
@@ -3888,7 +3888,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
                 (
@@ -3896,7 +3896,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='samplingfeatureid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
             ],
@@ -3918,7 +3918,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -3927,7 +3927,7 @@ class Migration(migrations.Migration):
                         db_column='samplingfeatureid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
             ],
@@ -3940,8 +3940,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_sampling_features',
-                through='odm2.SamplingFeatureAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.SamplingFeatureAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -3952,7 +3952,7 @@ class Migration(migrations.Migration):
                 db_column='elevationdatumcv',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.elevationdatum',
+                to='django_odm2.elevationdatum',
             ),
         ),
         migrations.AddField(
@@ -3960,8 +3960,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='sampling_features',
-                through='odm2.SamplingFeatureExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.SamplingFeatureExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -3969,8 +3969,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='sampling_features',
-                through='odm2.SamplingFeatureExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.SamplingFeatureExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -3981,7 +3981,7 @@ class Migration(migrations.Migration):
                 db_column='samplingfeaturegeotypecv',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.samplingfeaturegeotype',
+                to='django_odm2.samplingfeaturegeotype',
             ),
         ),
         migrations.AddField(
@@ -3990,7 +3990,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='samplingfeaturetypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.samplingfeaturetype',
+                to='django_odm2.samplingfeaturetype',
             ),
         ),
         migrations.CreateModel(
@@ -4013,7 +4013,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
                 (
@@ -4021,7 +4021,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='resultid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
             ],
@@ -4044,7 +4044,7 @@ class Migration(migrations.Migration):
                         db_column='dataqualityid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.dataquality',
+                        to='django_odm2.dataquality',
                     ),
                 ),
                 (
@@ -4053,7 +4053,7 @@ class Migration(migrations.Migration):
                         db_column='resultid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
             ],
@@ -4083,7 +4083,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -4092,7 +4092,7 @@ class Migration(migrations.Migration):
                         db_column='resultid',
                         on_delete=deletion.CASCADE,
                         related_name='dated_annotations',
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
             ],
@@ -4105,8 +4105,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_results',
-                through='odm2.ResultAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.ResultAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -4114,8 +4114,8 @@ class Migration(migrations.Migration):
             name='data_quality_values',
             field=models.ManyToManyField(
                 related_name='results',
-                through='odm2.ResultDataQuality',
-                to='odm2.dataquality',
+                through='django_odm2.ResultDataQuality',
+                to='django_odm2.dataquality',
             ),
         ),
         migrations.AddField(
@@ -4123,8 +4123,8 @@ class Migration(migrations.Migration):
             name='data_sets',
             field=models.ManyToManyField(
                 related_name='results',
-                through='odm2.DataSetResult',
-                to='odm2.dataset',
+                through='django_odm2.DataSetResult',
+                to='django_odm2.dataset',
             ),
         ),
         migrations.AddField(
@@ -4132,8 +4132,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='results',
-                through='odm2.ResultExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.ResultExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -4143,7 +4143,7 @@ class Migration(migrations.Migration):
                 db_column='featureactionid',
                 on_delete=deletion.CASCADE,
                 related_name='results',
-                to='odm2.featureaction',
+                to='django_odm2.featureaction',
             ),
         ),
         migrations.AddField(
@@ -4152,7 +4152,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='processinglevelid',
                 on_delete=deletion.CASCADE,
-                to='odm2.processinglevel',
+                to='django_odm2.processinglevel',
             ),
         ),
         migrations.AddField(
@@ -4161,7 +4161,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resulttypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.resulttype',
+                to='django_odm2.resulttype',
             ),
         ),
         migrations.AddField(
@@ -4170,7 +4170,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='sampledmediumcv',
                 on_delete=deletion.CASCADE,
-                to='odm2.medium',
+                to='django_odm2.medium',
             ),
         ),
         migrations.AddField(
@@ -4180,7 +4180,7 @@ class Migration(migrations.Migration):
                 blank=True,
                 db_column='statuscv',
                 on_delete=deletion.CASCADE,
-                to='odm2.status',
+                to='django_odm2.status',
             ),
         ),
         migrations.AddField(
@@ -4191,14 +4191,14 @@ class Migration(migrations.Migration):
                 db_column='taxonomicclassifierid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.taxonomicclassifier',
+                to='django_odm2.taxonomicclassifier',
             ),
         ),
         migrations.AddField(
             model_name='result',
             name='unit',
             field=models.ForeignKey(
-                db_column='unitsid', on_delete=deletion.CASCADE, to='odm2.unit'
+                db_column='unitsid', on_delete=deletion.CASCADE, to='django_odm2.unit'
             ),
         ),
         migrations.AddField(
@@ -4207,7 +4207,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='variableid',
                 on_delete=deletion.CASCADE,
-                to='odm2.variable',
+                to='django_odm2.variable',
             ),
         ),
         migrations.CreateModel(
@@ -4241,7 +4241,7 @@ class Migration(migrations.Migration):
                         db_column='relatedresultid',
                         on_delete=deletion.CASCADE,
                         related_name='related_result_related_result',
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -4249,7 +4249,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
                 (
@@ -4257,7 +4257,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='resultid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
             ],
@@ -4282,7 +4282,7 @@ class Migration(migrations.Migration):
                         db_column='modelid',
                         on_delete=deletion.CASCADE,
                         related_name='related_model_model',
-                        to='odm2.model',
+                        to='django_odm2.model',
                     ),
                 ),
                 (
@@ -4291,7 +4291,7 @@ class Migration(migrations.Migration):
                         db_column='relatedmodelid',
                         on_delete=deletion.CASCADE,
                         related_name='related_model_related_model',
-                        to='odm2.model',
+                        to='django_odm2.model',
                     ),
                 ),
                 (
@@ -4299,7 +4299,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -4324,7 +4324,7 @@ class Migration(migrations.Migration):
                         db_column='relatedfeatureid',
                         on_delete=deletion.CASCADE,
                         related_name='related_features_related_feature',
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
                 (
@@ -4332,7 +4332,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
                 (
@@ -4341,7 +4341,7 @@ class Migration(migrations.Migration):
                         db_column='samplingfeatureid',
                         on_delete=deletion.CASCADE,
                         related_name='related_features_sampling_feature',
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
                 (
@@ -4351,7 +4351,7 @@ class Migration(migrations.Migration):
                         db_column='spatialoffsetid',
                         null=True,
                         on_delete=deletion.CASCADE,
-                        to='odm2.spatialoffset',
+                        to='django_odm2.spatialoffset',
                     ),
                 ),
             ],
@@ -4404,7 +4404,7 @@ class Migration(migrations.Migration):
                         db_column='equipmentid',
                         on_delete=deletion.CASCADE,
                         related_name='related_equipment',
-                        to='odm2.equipment',
+                        to='django_odm2.equipment',
                     ),
                 ),
                 (
@@ -4413,7 +4413,7 @@ class Migration(migrations.Migration):
                         db_column='relatedequipmentid',
                         on_delete=deletion.CASCADE,
                         related_name='reverse_related_equipment',
-                        to='odm2.equipment',
+                        to='django_odm2.equipment',
                     ),
                 ),
                 (
@@ -4421,7 +4421,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -4452,7 +4452,7 @@ class Migration(migrations.Migration):
                         db_column='datasetid',
                         on_delete=deletion.CASCADE,
                         related_name='related_dataset_dataset',
-                        to='odm2.dataset',
+                        to='django_odm2.dataset',
                     ),
                 ),
                 (
@@ -4461,7 +4461,7 @@ class Migration(migrations.Migration):
                         db_column='relateddatasetid',
                         on_delete=deletion.CASCADE,
                         related_name='related_dataset_related_dataset',
-                        to='odm2.dataset',
+                        to='django_odm2.dataset',
                     ),
                 ),
                 (
@@ -4469,7 +4469,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -4494,7 +4494,7 @@ class Migration(migrations.Migration):
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
                         related_name='related_annonation_annotation',
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -4503,7 +4503,7 @@ class Migration(migrations.Migration):
                         db_column='relatedannotationid',
                         on_delete=deletion.CASCADE,
                         related_name='related_annotation_related_annontation',
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -4511,7 +4511,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -4536,7 +4536,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='related_actions',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -4545,7 +4545,7 @@ class Migration(migrations.Migration):
                         db_column='relatedactionid',
                         on_delete=deletion.CASCADE,
                         related_name='reverse_related_actions',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -4553,7 +4553,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -4591,7 +4591,7 @@ class Migration(migrations.Migration):
                         db_column='citationid',
                         null=True,
                         on_delete=deletion.CASCADE,
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -4600,7 +4600,7 @@ class Migration(migrations.Migration):
                         db_column='referencematerialid',
                         on_delete=deletion.CASCADE,
                         related_name='referencematerialvalue',
-                        to='odm2.referencematerial',
+                        to='django_odm2.referencematerial',
                     ),
                 ),
                 (
@@ -4608,7 +4608,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='unitsid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -4616,7 +4616,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='variableid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.variable',
+                        to='django_odm2.variable',
                     ),
                 ),
             ],
@@ -4653,7 +4653,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -4661,7 +4661,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='referencematerialid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.referencematerial',
+                        to='django_odm2.referencematerial',
                     ),
                 ),
             ],
@@ -4674,8 +4674,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='reference_materials',
-                through='odm2.ReferenceMaterialExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.ReferenceMaterialExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -4684,7 +4684,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='referencematerialmediumcv',
                 on_delete=deletion.CASCADE,
-                to='odm2.medium',
+                to='django_odm2.medium',
             ),
         ),
         migrations.AddField(
@@ -4693,7 +4693,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='referencematerialorganizationid',
                 on_delete=deletion.CASCADE,
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.AddField(
@@ -4704,7 +4704,7 @@ class Migration(migrations.Migration):
                 db_column='samplingfeatureid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.samplingfeature',
+                to='django_odm2.samplingfeature',
             ),
         ),
         migrations.CreateModel(
@@ -4721,7 +4721,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -4730,7 +4730,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.profileresultvalue',
+                        to='django_odm2.profileresultvalue',
                     ),
                 ),
             ],
@@ -4743,8 +4743,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_profile_values',
-                through='odm2.ProfileResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.ProfileResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -4753,7 +4753,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -4762,7 +4762,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -4774,7 +4774,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -4786,7 +4786,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -4803,7 +4803,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -4812,7 +4812,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.pointcoverageresultvalue',
+                        to='django_odm2.pointcoverageresultvalue',
                     ),
                 ),
             ],
@@ -4825,8 +4825,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_point_coverage_values',
-                through='odm2.PointCoverageResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.PointCoverageResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -4835,7 +4835,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='censorcodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.censorcode',
+                to='django_odm2.censorcode',
             ),
         ),
         migrations.AddField(
@@ -4844,7 +4844,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='qualitycodecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.qualitycode',
+                to='django_odm2.qualitycode',
             ),
         ),
         migrations.AddField(
@@ -4856,7 +4856,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -4868,7 +4868,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -4899,7 +4899,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -4907,7 +4907,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='personid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.people',
+                        to='django_odm2.people',
                     ),
                 ),
             ],
@@ -4920,8 +4920,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='people',
-                through='odm2.PersonExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.PersonExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -4930,7 +4930,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='organizationtypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.organizationtype',
+                to='django_odm2.organizationtype',
             ),
         ),
         migrations.AddField(
@@ -4941,14 +4941,14 @@ class Migration(migrations.Migration):
                 db_column='parentorganizationid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.AddField(
             model_name='organization',
             name='people',
             field=models.ManyToManyField(
-                through='odm2.Affiliation', to='odm2.people'
+                through='django_odm2.Affiliation', to='django_odm2.people'
             ),
         ),
         migrations.CreateModel(
@@ -4979,7 +4979,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
                 (
@@ -4987,7 +4987,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='methodid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.method',
+                        to='django_odm2.method',
                     ),
                 ),
             ],
@@ -5015,7 +5015,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='methodid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.method',
+                        to='django_odm2.method',
                     ),
                 ),
                 (
@@ -5023,7 +5023,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
             ],
@@ -5045,7 +5045,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='citationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -5053,7 +5053,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='methodid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.method',
+                        to='django_odm2.method',
                     ),
                 ),
                 (
@@ -5061,7 +5061,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -5083,7 +5083,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -5092,7 +5092,7 @@ class Migration(migrations.Migration):
                         db_column='methodid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.method',
+                        to='django_odm2.method',
                     ),
                 ),
             ],
@@ -5105,8 +5105,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_methods',
-                through='odm2.MethodAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.MethodAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -5114,8 +5114,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='methods',
-                through='odm2.MethodExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.MethodExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -5123,8 +5123,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='methods',
-                through='odm2.MethodExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.MethodExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.AddField(
@@ -5133,7 +5133,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='methodtypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.methodtype',
+                to='django_odm2.methodtype',
             ),
         ),
         migrations.AddField(
@@ -5144,7 +5144,7 @@ class Migration(migrations.Migration):
                 db_column='organizationid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.CreateModel(
@@ -5161,7 +5161,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -5170,7 +5170,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.measurementresultvalue',
+                        to='django_odm2.measurementresultvalue',
                     ),
                 ),
             ],
@@ -5183,8 +5183,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_measurement_values',
-                through='odm2.MeasurementResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.MeasurementResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.CreateModel(
@@ -5220,7 +5220,7 @@ class Migration(migrations.Migration):
                         db_column='instrumentmethodid',
                         on_delete=deletion.CASCADE,
                         related_name='instrument_output_variables',
-                        to='odm2.method',
+                        to='django_odm2.method',
                     ),
                 ),
                 (
@@ -5229,7 +5229,7 @@ class Migration(migrations.Migration):
                         db_column='instrumentrawoutputunitsid',
                         on_delete=deletion.CASCADE,
                         related_name='instrument_output_variables',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -5238,7 +5238,7 @@ class Migration(migrations.Migration):
                         db_column='modelid',
                         on_delete=deletion.CASCADE,
                         related_name='instrument_output_variables',
-                        to='odm2.equipmentmodel',
+                        to='django_odm2.equipmentmodel',
                     ),
                 ),
                 (
@@ -5247,7 +5247,7 @@ class Migration(migrations.Migration):
                         db_column='variableid',
                         on_delete=deletion.CASCADE,
                         related_name='instrument_output_variables',
-                        to='odm2.variable',
+                        to='django_odm2.variable',
                     ),
                 ),
             ],
@@ -5266,7 +5266,7 @@ class Migration(migrations.Migration):
                 db_column='samplingfeatureid',
                 on_delete=deletion.CASCADE,
                 related_name='feature_actions',
-                to='odm2.samplingfeature',
+                to='django_odm2.samplingfeature',
             ),
         ),
         migrations.AddField(
@@ -5275,7 +5275,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='identifiersystemorganizationid',
                 on_delete=deletion.CASCADE,
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.AddField(
@@ -5284,7 +5284,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='propertydatatypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.propertydatatype',
+                to='django_odm2.propertydatatype',
             ),
         ),
         migrations.AddField(
@@ -5295,7 +5295,7 @@ class Migration(migrations.Migration):
                 db_column='propertyunitsid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -5313,7 +5313,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -5322,7 +5322,7 @@ class Migration(migrations.Migration):
                         db_column='equipmentid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.equipment',
+                        to='django_odm2.equipment',
                     ),
                 ),
             ],
@@ -5336,7 +5336,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='modelmanufacturerid',
                 on_delete=deletion.CASCADE,
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.AddField(
@@ -5344,8 +5344,8 @@ class Migration(migrations.Migration):
             name='output_units',
             field=models.ManyToManyField(
                 related_name='instrument_models',
-                through='odm2.InstrumentOutputVariable',
-                to='odm2.unit',
+                through='django_odm2.InstrumentOutputVariable',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -5353,8 +5353,8 @@ class Migration(migrations.Migration):
             name='output_variables',
             field=models.ManyToManyField(
                 related_name='instrument_models',
-                through='odm2.InstrumentOutputVariable',
-                to='odm2.variable',
+                through='django_odm2.InstrumentOutputVariable',
+                to='django_odm2.variable',
             ),
         ),
         migrations.CreateModel(
@@ -5371,7 +5371,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -5380,7 +5380,7 @@ class Migration(migrations.Migration):
                         db_column='equipmentid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.equipment',
+                        to='django_odm2.equipment',
                     ),
                 ),
             ],
@@ -5393,8 +5393,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_equipment',
-                through='odm2.EquipmentAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.EquipmentAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -5404,7 +5404,7 @@ class Migration(migrations.Migration):
                 db_column='equipmentmodelid',
                 on_delete=deletion.CASCADE,
                 related_name='equipment',
-                to='odm2.equipmentmodel',
+                to='django_odm2.equipmentmodel',
             ),
         ),
         migrations.AddField(
@@ -5414,7 +5414,7 @@ class Migration(migrations.Migration):
                 db_column='equipmentownerid',
                 on_delete=deletion.CASCADE,
                 related_name='owned_equipment',
-                to='odm2.people',
+                to='django_odm2.people',
             ),
         ),
         migrations.AddField(
@@ -5423,7 +5423,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='equipmenttypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.equipmenttype',
+                to='django_odm2.equipmenttype',
             ),
         ),
         migrations.AddField(
@@ -5433,7 +5433,7 @@ class Migration(migrations.Migration):
                 db_column='equipmentvendorid',
                 on_delete=deletion.CASCADE,
                 related_name='equipment',
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.CreateModel(
@@ -5458,7 +5458,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='directivetypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.directivetype',
+                        to='django_odm2.directivetype',
                     ),
                 ),
             ],
@@ -5473,7 +5473,7 @@ class Migration(migrations.Migration):
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.result',
+                to='django_odm2.result',
             ),
         ),
         migrations.CreateModel(
@@ -5490,7 +5490,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='citationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -5498,7 +5498,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='datasetid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.dataset',
+                        to='django_odm2.dataset',
                     ),
                 ),
                 (
@@ -5506,7 +5506,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='relationshiptypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.relationshiptype',
+                        to='django_odm2.relationshiptype',
                     ),
                 ),
             ],
@@ -5519,8 +5519,8 @@ class Migration(migrations.Migration):
             name='citations',
             field=models.ManyToManyField(
                 related_name='cited_data_sets',
-                through='odm2.DataSetCitation',
-                to='odm2.citation',
+                through='django_odm2.DataSetCitation',
+                to='django_odm2.citation',
             ),
         ),
         migrations.AddField(
@@ -5529,7 +5529,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='datasettypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.datasettype',
+                to='django_odm2.datasettype',
             ),
         ),
         migrations.AddField(
@@ -5538,7 +5538,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='dataqualitytypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.dataqualitytype',
+                to='django_odm2.dataqualitytype',
             ),
         ),
         migrations.AddField(
@@ -5549,7 +5549,7 @@ class Migration(migrations.Migration):
                 db_column='dataqualityvalueunitsid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -5593,7 +5593,7 @@ class Migration(migrations.Migration):
                         db_column='affiliationid',
                         on_delete=deletion.CASCADE,
                         related_name='data_logger_programs',
-                        to='odm2.affiliation',
+                        to='django_odm2.affiliation',
                     ),
                 ),
             ],
@@ -5651,7 +5651,7 @@ class Migration(migrations.Migration):
                         db_column='aggregationstatisticcv',
                         on_delete=deletion.CASCADE,
                         related_name='data_logger_file_columns',
-                        to='odm2.aggregationstatistic',
+                        to='django_odm2.aggregationstatistic',
                     ),
                 ),
                 (
@@ -5660,7 +5660,7 @@ class Migration(migrations.Migration):
                         db_column='dataloggerfileid',
                         on_delete=deletion.CASCADE,
                         related_name='data_logger_file_columns',
-                        to='odm2.dataloggerfile',
+                        to='django_odm2.dataloggerfile',
                     ),
                 ),
                 (
@@ -5669,7 +5669,7 @@ class Migration(migrations.Migration):
                         db_column='instrumentoutputvariableid',
                         on_delete=deletion.CASCADE,
                         related_name='data_logger_file_columns',
-                        to='odm2.instrumentoutputvariable',
+                        to='django_odm2.instrumentoutputvariable',
                     ),
                 ),
                 (
@@ -5680,7 +5680,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='recording_interval_data_logger_file_columns',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
                 (
@@ -5691,7 +5691,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='data_logger_file_columns',
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -5702,7 +5702,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='scan_interval_data_logger_file_columns',
-                        to='odm2.unit',
+                        to='django_odm2.unit',
                     ),
                 ),
             ],
@@ -5717,7 +5717,7 @@ class Migration(migrations.Migration):
                 db_column='programid',
                 on_delete=deletion.CASCADE,
                 related_name='data_logger_files',
-                to='odm2.dataloggerprogramfile',
+                to='django_odm2.dataloggerprogramfile',
             ),
         ),
         migrations.CreateModel(
@@ -5748,7 +5748,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='citationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -5756,7 +5756,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='externalidentifiersystemid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.externalidentifiersystem',
+                        to='django_odm2.externalidentifiersystem',
                     ),
                 ),
             ],
@@ -5784,7 +5784,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='citationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -5792,7 +5792,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
             ],
@@ -5805,8 +5805,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='citations',
-                through='odm2.CitationExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.CitationExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -5814,8 +5814,8 @@ class Migration(migrations.Migration):
             name='external_identifiers',
             field=models.ManyToManyField(
                 related_name='citations',
-                through='odm2.CitationExternalIdentifier',
-                to='odm2.externalidentifiersystem',
+                through='django_odm2.CitationExternalIdentifier',
+                to='django_odm2.externalidentifiersystem',
             ),
         ),
         migrations.CreateModel(
@@ -5832,7 +5832,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
                 (
@@ -5841,7 +5841,7 @@ class Migration(migrations.Migration):
                         db_column='valueid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.categoricalresultvalue',
+                        to='django_odm2.categoricalresultvalue',
                     ),
                 ),
             ],
@@ -5854,8 +5854,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_categorical_values',
-                through='odm2.CategoricalResultValueAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.CategoricalResultValueAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -5864,7 +5864,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='citationid',
                 on_delete=deletion.CASCADE,
-                to='odm2.citation',
+                to='django_odm2.citation',
             ),
         ),
         migrations.AddField(
@@ -5873,7 +5873,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='personid',
                 on_delete=deletion.CASCADE,
-                to='odm2.people',
+                to='django_odm2.people',
             ),
         ),
         migrations.AddField(
@@ -5882,7 +5882,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='annotationtypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.annotationtype',
+                to='django_odm2.annotationtype',
             ),
         ),
         migrations.AddField(
@@ -5893,7 +5893,7 @@ class Migration(migrations.Migration):
                 db_column='annotatorid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.people',
+                to='django_odm2.people',
             ),
         ),
         migrations.AddField(
@@ -5904,7 +5904,7 @@ class Migration(migrations.Migration):
                 db_column='citationid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.citation',
+                to='django_odm2.citation',
             ),
         ),
         migrations.AddField(
@@ -5916,7 +5916,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='affiliations',
-                to='odm2.organization',
+                to='django_odm2.organization',
             ),
         ),
         migrations.AddField(
@@ -5926,7 +5926,7 @@ class Migration(migrations.Migration):
                 db_column='personid',
                 on_delete=deletion.CASCADE,
                 related_name='affiliations',
-                to='odm2.people',
+                to='django_odm2.people',
             ),
         ),
         migrations.CreateModel(
@@ -5949,7 +5949,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -5957,7 +5957,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='propertyid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.extensionproperty',
+                        to='django_odm2.extensionproperty',
                     ),
                 ),
             ],
@@ -5980,7 +5980,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -5989,7 +5989,7 @@ class Migration(migrations.Migration):
                         db_column='directiveid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.directive',
+                        to='django_odm2.directive',
                     ),
                 ),
             ],
@@ -6024,7 +6024,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='action_by',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -6032,7 +6032,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='affiliationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.affiliation',
+                        to='django_odm2.affiliation',
                     ),
                 ),
             ],
@@ -6055,7 +6055,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.action',
+                        to='django_odm2.action',
                     ),
                 ),
                 (
@@ -6063,7 +6063,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='annotationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.annotation',
+                        to='django_odm2.annotation',
                     ),
                 ),
             ],
@@ -6077,7 +6077,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='actiontypecv',
                 on_delete=deletion.CASCADE,
-                to='odm2.actiontype',
+                to='django_odm2.actiontype',
             ),
         ),
         migrations.AddField(
@@ -6085,8 +6085,8 @@ class Migration(migrations.Migration):
             name='annotations',
             field=models.ManyToManyField(
                 related_name='annotated_actions',
-                through='odm2.ActionAnnotation',
-                to='odm2.annotation',
+                through='django_odm2.ActionAnnotation',
+                to='django_odm2.annotation',
             ),
         ),
         migrations.AddField(
@@ -6094,8 +6094,8 @@ class Migration(migrations.Migration):
             name='directives',
             field=models.ManyToManyField(
                 related_name='actions',
-                through='odm2.ActionDirective',
-                to='odm2.directive',
+                through='django_odm2.ActionDirective',
+                to='django_odm2.directive',
             ),
         ),
         migrations.AddField(
@@ -6103,8 +6103,8 @@ class Migration(migrations.Migration):
             name='equipment_used',
             field=models.ManyToManyField(
                 related_name='actions',
-                through='odm2.EquipmentUsed',
-                to='odm2.equipment',
+                through='django_odm2.EquipmentUsed',
+                to='django_odm2.equipment',
             ),
         ),
         migrations.AddField(
@@ -6112,8 +6112,8 @@ class Migration(migrations.Migration):
             name='extension_property_values',
             field=models.ManyToManyField(
                 related_name='actions',
-                through='odm2.ActionExtensionPropertyValue',
-                to='odm2.extensionproperty',
+                through='django_odm2.ActionExtensionPropertyValue',
+                to='django_odm2.extensionproperty',
             ),
         ),
         migrations.AddField(
@@ -6122,7 +6122,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='methodid',
                 on_delete=deletion.CASCADE,
-                to='odm2.method',
+                to='django_odm2.method',
             ),
         ),
         migrations.AddField(
@@ -6130,8 +6130,8 @@ class Migration(migrations.Migration):
             name='people',
             field=models.ManyToManyField(
                 related_name='actions',
-                through='odm2.ActionBy',
-                to='odm2.affiliation',
+                through='django_odm2.ActionBy',
+                to='django_odm2.affiliation',
             ),
         ),
         migrations.AddField(
@@ -6140,7 +6140,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.transectresult',
+                to='django_odm2.transectresult',
             ),
         ),
         migrations.AddField(
@@ -6152,7 +6152,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6163,7 +6163,7 @@ class Migration(migrations.Migration):
                 db_column='intendedtransectspacingunitsid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6174,7 +6174,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6186,7 +6186,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6195,7 +6195,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.trajectoryresult',
+                to='django_odm2.trajectoryresult',
             ),
         ),
         migrations.AddField(
@@ -6207,7 +6207,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6218,7 +6218,7 @@ class Migration(migrations.Migration):
                 db_column='intendedtrajectoryspacingunitsid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6229,7 +6229,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6239,7 +6239,7 @@ class Migration(migrations.Migration):
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
                 related_name='values',
-                to='odm2.timeseriesresult',
+                to='django_odm2.timeseriesresult',
             ),
         ),
         migrations.AddField(
@@ -6251,7 +6251,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6262,7 +6262,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6274,7 +6274,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6286,7 +6286,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6298,7 +6298,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6307,7 +6307,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.spectraresult',
+                to='django_odm2.spectraresult',
             ),
         ),
         migrations.AddField(
@@ -6318,7 +6318,7 @@ class Migration(migrations.Migration):
                 db_column='intendedwavelengthspacingunitsid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6329,7 +6329,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6341,7 +6341,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6353,7 +6353,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6365,7 +6365,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -6385,7 +6385,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=deletion.CASCADE,
                         related_name='specimen_taxonomic_classifiers',
-                        to='odm2.citation',
+                        to='django_odm2.citation',
                     ),
                 ),
                 (
@@ -6393,7 +6393,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='taxonomicclassifierid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.taxonomicclassifier',
+                        to='django_odm2.taxonomicclassifier',
                     ),
                 ),
                 (
@@ -6402,7 +6402,7 @@ class Migration(migrations.Migration):
                         db_column='samplingfeatureid',
                         on_delete=deletion.CASCADE,
                         related_name='taxonomic_classifiers',
-                        to='odm2.specimen',
+                        to='django_odm2.specimen',
                     ),
                 ),
             ],
@@ -6421,7 +6421,7 @@ class Migration(migrations.Migration):
                         primary_key=True,
                         related_name='site',
                         serialize=False,
-                        to='odm2.samplingfeature',
+                        to='django_odm2.samplingfeature',
                     ),
                 ),
                 ('latitude', models.FloatField(db_column='latitude')),
@@ -6431,7 +6431,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='sitetypecv',
                         on_delete=deletion.CASCADE,
-                        to='odm2.sitetype',
+                        to='django_odm2.sitetype',
                     ),
                 ),
                 (
@@ -6439,7 +6439,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='spatialreferenceid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.spatialreference',
+                        to='django_odm2.spatialreference',
                     ),
                 ),
             ],
@@ -6453,7 +6453,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.sectionresult',
+                to='django_odm2.sectionresult',
             ),
         ),
         migrations.AddField(
@@ -6465,7 +6465,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6477,7 +6477,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6489,7 +6489,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6500,7 +6500,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6512,7 +6512,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -6525,7 +6525,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -6533,7 +6533,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='normalizedbyreferencematerialvalueid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.referencematerialvalue',
+                        to='django_odm2.referencematerialvalue',
                     ),
                 ),
             ],
@@ -6551,7 +6551,7 @@ class Migration(migrations.Migration):
                         on_delete=deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
-                        to='odm2.result',
+                        to='django_odm2.result',
                     ),
                 ),
                 (
@@ -6559,7 +6559,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         db_column='derivationequationid',
                         on_delete=deletion.CASCADE,
-                        to='odm2.derivationequation',
+                        to='django_odm2.derivationequation',
                     ),
                 ),
             ],
@@ -6573,7 +6573,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.profileresult',
+                to='django_odm2.profileresult',
             ),
         ),
         migrations.AddField(
@@ -6585,7 +6585,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6597,7 +6597,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6608,7 +6608,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6620,7 +6620,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6632,7 +6632,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6641,7 +6641,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.pointcoverageresult',
+                to='django_odm2.pointcoverageresult',
             ),
         ),
         migrations.AddField(
@@ -6653,7 +6653,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6665,7 +6665,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6676,7 +6676,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6688,7 +6688,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6700,7 +6700,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6709,7 +6709,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.measurementresult',
+                to='django_odm2.measurementresult',
             ),
         ),
         migrations.AddField(
@@ -6720,7 +6720,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6732,7 +6732,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6744,7 +6744,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6756,7 +6756,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6768,7 +6768,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6777,7 +6777,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='resultid',
                 on_delete=deletion.CASCADE,
-                to='odm2.categoricalresult',
+                to='django_odm2.categoricalresult',
             ),
         ),
         migrations.AddField(
@@ -6788,7 +6788,7 @@ class Migration(migrations.Migration):
                 db_column='spatialreferenceid',
                 null=True,
                 on_delete=deletion.CASCADE,
-                to='odm2.spatialreference',
+                to='django_odm2.spatialreference',
             ),
         ),
         migrations.AddField(
@@ -6800,7 +6800,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6812,7 +6812,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.AddField(
@@ -6824,7 +6824,7 @@ class Migration(migrations.Migration):
                 null=True,
                 on_delete=deletion.CASCADE,
                 related_name='+',
-                to='odm2.unit',
+                to='django_odm2.unit',
             ),
         ),
         migrations.CreateModel(
@@ -6842,7 +6842,7 @@ class Migration(migrations.Migration):
                         db_column='calibration_standards',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.referencematerial',
+                        to='django_odm2.referencematerial',
                     ),
                 ),
                 (
@@ -6851,7 +6851,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.calibrationaction',
+                        to='django_odm2.calibrationaction',
                     ),
                 ),
             ],
@@ -6874,7 +6874,7 @@ class Migration(migrations.Migration):
                         db_column='equipmentid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.equipment',
+                        to='django_odm2.equipment',
                     ),
                 ),
                 (
@@ -6883,7 +6883,7 @@ class Migration(migrations.Migration):
                         db_column='actionid',
                         on_delete=deletion.CASCADE,
                         related_name='+',
-                        to='odm2.calibrationaction',
+                        to='django_odm2.calibrationaction',
                     ),
                 ),
             ],
@@ -6896,8 +6896,8 @@ class Migration(migrations.Migration):
             name='calibration_standards',
             field=models.ManyToManyField(
                 related_name='calibration_actions',
-                through='odm2.CalibrationStandard',
-                to='odm2.referencematerial',
+                through='django_odm2.CalibrationStandard',
+                to='django_odm2.referencematerial',
             ),
         ),
         migrations.AddField(
@@ -6906,7 +6906,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 db_column='instrumentoutputvariableid',
                 on_delete=deletion.CASCADE,
-                to='odm2.instrumentoutputvariable',
+                to='django_odm2.instrumentoutputvariable',
             ),
         ),
         migrations.AddField(
@@ -6914,8 +6914,8 @@ class Migration(migrations.Migration):
             name='reference_equipment',
             field=models.ManyToManyField(
                 related_name='calibration_reference_actions',
-                through='odm2.CalibrationReferenceEquipment',
-                to='odm2.equipment',
+                through='django_odm2.CalibrationReferenceEquipment',
+                to='django_odm2.equipment',
             ),
         ),
     ]
