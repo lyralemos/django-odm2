@@ -147,4 +147,4 @@ environment.
 
       (django-odm2) $ make dist-upload
 
-  The package should now be available at https://pypi.org/project/django_odm2/
+  The package should now be available at https://pypi.org/project/django-odm2/

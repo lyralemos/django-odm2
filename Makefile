@@ -90,7 +90,7 @@ check-static-analysis: check-lint check-types
 # help: docs                           - generate project documentation
 .PHONY: docs
 docs:
-	@cd docs; rm -rf source/api/django-odm2*.rst source/api/modules.rst build/*
+	@cd docs; rm -rf source/api/django_odm2*.rst source/api/modules.rst build/*
 	@cd docs; make html
 
 
