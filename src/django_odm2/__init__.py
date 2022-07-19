@@ -2,4 +2,4 @@
 Django-odm2 maps the ODM2 model to django ORM
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
